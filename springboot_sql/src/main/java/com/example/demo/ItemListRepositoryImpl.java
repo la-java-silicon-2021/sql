@@ -19,7 +19,7 @@ public class ItemListRepositoryImpl implements ItemListRepository {
 	EntityManager em;
 
 	/**
-	 * 
+	 * 商品一覧検索
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Item> findItemList(String name, Integer minPrice, Integer maxPrice, String order) {

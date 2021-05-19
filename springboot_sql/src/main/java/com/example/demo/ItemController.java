@@ -44,7 +44,7 @@ public class ItemController {
 		mv.addObject("items", itemList);
 
 		// 検索条件をモデルにセット
-		// 検索条件の保持用
+		// (検索条件の保持用)
 		mv.addObject("maxPrice", maxPrice);
 		mv.addObject("minPrice", minPrice);
 		mv.addObject("name", name);

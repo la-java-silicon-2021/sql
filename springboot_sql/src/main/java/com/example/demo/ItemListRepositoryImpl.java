@@ -20,6 +20,12 @@ public class ItemListRepositoryImpl implements ItemListRepository {
 
 	/**
 	 * 商品一覧検索
+	 * 
+	 * @param name
+	 * @param minPrice
+	 * @param maxPrice
+	 * @param order
+	 * @return
 	 */
 	@SuppressWarnings("unchecked")
 	public List<Item> findItemList(String name, Integer minPrice, Integer maxPrice, String order) {
@@ -70,9 +76,11 @@ public class ItemListRepositoryImpl implements ItemListRepository {
 		if (name != null && !name.equals("")) {
 			query.setParameter("name", "%" + name + "%");
 		}
+		
 		if (minPrice != null) {
 			query.setParameter("minPrice", minPrice);
 		}
+		
 		if (maxPrice != null) {
 			query.setParameter("maxPrice", maxPrice);
 		}
